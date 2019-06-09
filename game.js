@@ -1,7 +1,6 @@
 function d(x1, y1, x2, y2){
     return Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
 }
-console.log("pesho");
 function areRotColliding(obj1, obj2){
     let sx1=obj1.sx, sy1=obj1.sy, sx2=obj2.sx, sy2=obj2.sy;
     if (Math.round(obj1.angle / (Math.PI/2))%2==0){
@@ -14,7 +13,6 @@ function areRotColliding(obj1, obj2){
     }
     return areColliding(obj1.x-sx1/2, obj1.y-sy1/2, sx1, sy1, obj2.x-sx2/2, obj2.y-sy2/2, sx2, sy2);
 }
-console.log("pesho");
 
 function drawImageRot(img, x, y, sx, sy, angle){
     context.save();
@@ -23,7 +21,6 @@ function drawImageRot(img, x, y, sx, sy, angle){
     drawImage(img, -sx/2, -sy/2, sx, sy);
     context.restore();
 }
-console.log("pesho");
 
 var human_img = tryToLoad("human", "blue");
 var human_dead_img = tryToLoad("human_dead", "red");
@@ -262,7 +259,7 @@ class Door extends Wall{
 }
 
 var projectiles = [];
-var humans = [new Player(0, 400, 300), new BasicEnemy(1, 100, 100)];
+var humans = [new Player(0, 400, 300), new BasicEnemy(1, 100, 100), new BasicEnemy(2, 200, 100)];
 var weapons = [new Pistol(200, 200), new Pistol(500, 500)];
 var walls = [new Wall(300, 300, 10, 100, Math.PI/2), new Wall(350, 250, 10, 100, 0)];
 
